@@ -11,9 +11,9 @@ public class Exercicio3Main
 		Scanner sc = new Scanner(System.in);
 		
 		Conta conta1 = new Conta(600);
-		menu();
 		int opc;
 		do{
+		    menu();
 		    opc = sc.nextInt();
 		    switch(opc){
 		        case 1:{
@@ -31,22 +31,26 @@ public class Exercicio3Main
 		            System.out.println("Valor depositado com sucesso!");
 		            break;
 		        }
-		        /*case 4:{
+		        case 4:{
+		            System.out.println("Digite o valor do saque: ");
+		            float valor = sc.nextFloat();
+		            conta1.saque(valor);
+		            System.out.println("Valor sacado com sucesso!");
+		            break;
+		        }
+		        case 5:{
 		            
 		            break;
 		        }
-		        case 1:{
-		            
+		        case 6:{
+		            String retorno = conta1.usoChequeEspecial();
+		            System.out.println(retorno);
 		            break;
 		        }
-		        case 1:{
-		            
+		        case 0:{
+		            System.out.println("Saindo do programa...");
 		            break;
 		        }
-		        case 1:{
-		            
-		            break;
-		        }*/
 		    }
 		}while(opc != 0);
     }
